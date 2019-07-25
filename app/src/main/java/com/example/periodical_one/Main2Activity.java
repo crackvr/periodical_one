@@ -27,8 +27,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         String name=b.getString("name");
         String num=b.getString("num");
         t1=(TextView)findViewById(R.id.msg);
-        String test = "\nWelcome Username:  "+ name +
-                " \n\nPhone Number:  "+ num;
+        String test = "\nWelcome :  "+ name +
+                " \n\nContact:  "+ num;
         t1.setText(test);
         rg1=findViewById(R.id.RadioGroup1);
         rg2=findViewById(R.id.RadioGroup2);
@@ -55,7 +55,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         if(view.getId() == R.id.button2) {
             String count1=String.valueOf(count);
-            Toast.makeText(this, "Calculating the Score!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Quized!", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, Main3Activity.class);
             Bundle b = getIntent().getExtras();
             String num = b.getString("num");

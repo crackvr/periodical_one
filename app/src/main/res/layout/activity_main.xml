@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorAccent">
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
@@ -17,7 +17,7 @@
         android:layout_marginStart="164dp"
         android:layout_marginLeft="164dp"
         android:layout_marginTop="426dp"
-        android:text="Quiz"
+        android:text="Take Quiz"
         android:textColor="@color/colorAccent"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="25dp" />
@@ -56,7 +56,7 @@
         android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Enter Name"
+        android:hint="full name"
         android:layout_alignLeft="@+id/textView"
         android:layout_marginLeft="2dp" />
 
@@ -71,7 +71,7 @@
         android:ems="10"
         android:inputType="number"
         android:maxLength="10"
-        android:hint="Enter Mobile Number"
+        android:hint="0123456789"
         android:layout_alignRight="@+id/editText"
         android:layout_marginRight="0dp" />
 

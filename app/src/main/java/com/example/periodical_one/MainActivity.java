@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         b1.setOnClickListener(this);
         ed1 = (EditText) findViewById(R.id.editText);
         ed2 = (EditText) findViewById(R.id.editText2);
-        String days[]={"Vij","Vizaj","Coimb","Hyd","ongole"};
+        String days[]={"city a","city b","city c","city d","city d","city e","city f"};
         s=(Spinner)findViewById(R.id.spinner);
         ArrayAdapter<String> adap2=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,days);
         s.setAdapter(adap2);
@@ -44,14 +44,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String num=ed2.getText().toString().trim();
         if(name.equals("")||num.equals(""))
         {
-            Toast.makeText(this,"Please Fill All The Fields!!!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"All feilds are compulsory", Toast.LENGTH_LONG).show();
 
         }
         else{
             Intent i=new Intent(this,Main2Activity.class);
             i.putExtra("name",name);
             i.putExtra("num",num);
-            Toast.makeText(this,"Going to start quiz!!!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Starting quiz", Toast.LENGTH_LONG).show();
             startActivity(i);
         }
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             TextView txt = (TextView) view;
             //Checked Text view
             Log.d("spinner",txt.getText().toString());
-            Toast.makeText(getApplicationContext(), "You have selected " + txt.getText(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "selected " + txt.getText(), Toast.LENGTH_SHORT).show();
         }
 
 
@@ -73,6 +73,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-        Toast.makeText(getApplicationContext(), "No selection yet", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Make selections", Toast.LENGTH_SHORT).show();
     }
 }
